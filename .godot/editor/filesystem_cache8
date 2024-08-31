@@ -1,6 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1725126305
+::res://::1725132008
+arrow.png::CompressedTexture2D::1916408435866859087::1725132008::1725132014::1::::<><>::
 floor.png::CompressedTexture2D::484226604916547113::1725126305::1725126310::1::::<><>::
 icon.svg::CompressedTexture2D::8408093655844341043::1725126171::1725126186::1::::<><>::
 obstacle.png::CompressedTexture2D::8471039302763101027::1725126296::1725126310::1::::<><>::
+level.tscn::PackedScene::3593016886597825542::1725131739::0::1::::<><>::uid://b1i0kthdkt1vn::::res://shooter.tscn<>uid://g5te2ra2eisv::::res://floor.png
+shooter.gd::GDScript::-1::1725131739::0::1::::<>RigidBody2D<>::
+shooter.tscn::PackedScene::4229382431980362647::1725131739::0::1::::<><>::res://shooter.gd<>uid://cd0rp6hkn54v4::::res://shooter.png
 shooter.png::CompressedTexture2D::5036077957447822363::1725126281::1725126310::1::::<><>::
