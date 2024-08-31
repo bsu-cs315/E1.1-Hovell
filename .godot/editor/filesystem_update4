@@ -1,3 +1,5 @@
 res://shooter.tscn
 res://level.tscn
 res://shooter.gd
+res://hud.tscn
+res://hud.gd

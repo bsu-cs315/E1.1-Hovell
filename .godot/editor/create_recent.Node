@@ -1,3 +1,7 @@
+Timer
+Label
+CanvasLayer
+RichTextLabel
 Sprite2D
 CollisionShape2D
 TileMapLayer
