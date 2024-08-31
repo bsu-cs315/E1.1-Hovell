@@ -9,6 +9,7 @@ size = Vector2(100, 100)
 [node name="Shooter" type="RigidBody2D"]
 mass = 0.2
 gravity_scale = 0.1
+contact_monitor = true
 max_contacts_reported = 100
 script = ExtResource("1_dcmwa")
 
@@ -19,3 +20,5 @@ shape = SubResource("RectangleShape2D_exbvm")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_yvh8s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

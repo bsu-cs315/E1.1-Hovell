@@ -28,4 +28,7 @@ func addStrength():
 func subtractStrength():
 	if (strength > 0):
 		strength -= 20
-	
+#
+#func _on_body_entered(body: Node) -> void:
+	#if (body.name == "GroundTileMap"): get_tree().change_scene_to_file("res://level.tscn")
+#	fix error: "Removing a CollisionObject node during a physics callback is not allowed"

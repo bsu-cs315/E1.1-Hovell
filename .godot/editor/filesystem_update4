@@ -1,8 +1,7 @@
 res://shooter.tscn
 res://level.tscn
-res://shooter.gd
 res://hud.tscn
-res://hud.gd
-res://obstacle.gd
 res://obstacle.tscn
+res://shooter.gd
 res://level.gd
+res://obstacle.gd
