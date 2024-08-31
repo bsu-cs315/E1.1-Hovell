@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cd0rp6hkn54v4" path="res://shooter.png" id="1_yvh8s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exbvm"]
+size = Vector2(100, 100)
 
 [node name="Shooter" type="RigidBody2D"]
 mass = 0.1
