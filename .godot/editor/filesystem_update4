@@ -5,3 +5,4 @@ res://hud.tscn
 res://hud.gd
 res://obstacle.gd
 res://obstacle.tscn
+res://level.gd
