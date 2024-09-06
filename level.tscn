@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://brgqp0oww0bp3"]
+[gd_scene load_steps=10 format=4 uid="uid://brgqp0oww0bp3"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_3a1ja"]
 [ext_resource type="PackedScene" uid="uid://b1i0kthdkt1vn" path="res://shooter.tscn" id="1_8liep"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://2kk7416mees2" path="res://arrow.png" id="3_gatks"]
 [ext_resource type="PackedScene" uid="uid://bna0kb2xta5wl" path="res://hud.tscn" id="4_3owsy"]
 [ext_resource type="PackedScene" uid="uid://dg2migv8m5u0y" path="res://obstacle.tscn" id="5_52lv3"]
+[ext_resource type="Texture2D" uid="uid://dyn365uj6d6lm" path="res://background.png" id="7_ynuv2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5bgc"]
 resource_name = "Floor"
@@ -40,5 +41,10 @@ texture = ExtResource("3_gatks")
 
 [node name="Obstacle" parent="." instance=ExtResource("5_52lv3")]
 position = Vector2(344, 232)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(640, 360)
+texture = ExtResource("7_ynuv2")
 
 [connection signal="sleeping_state_changed" from="Shooter" to="." method="_on_shooter_sleeping_state_changed"]
