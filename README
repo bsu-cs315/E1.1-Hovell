@@ -1,0 +1,17 @@
+Author: Camden Hovell
+Assignment: Exercise 1.1: 2D Physics-Based Gameplay
+Project: Supermarket Smash
+Licenses: None
+Web Playable Link: https://cam-com.itch.io/supermarket-smash
+Report:
+  Essential Goals:
+    Controls: Complete
+    Licenses: Complete
+    Version Control: Complete
+    Release Management: Complete
+    Report: Complete
+  Auxiliary Goals:
+    Instructions: Complete within game HUD
+    Angle clamp: Complete
+    Target: Complete, disappears on collision
+    Modify Strength: Complete with Q and E keys
