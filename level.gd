@@ -1,29 +1,34 @@
 extends Node2D
 
+@onready var shooterObject : Shooter = $Shooter
+@onready var hudObject : HUD = $HUD
+@onready var arrowSprite : Sprite2D = $Arrow
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$HUD.updateStrength($Shooter.strength)
+	hudObject.updateStrength(shooterObject.strength)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("launch")):
-		$Shooter.launch()
-		$Arrow.hide()
+		shooterObject.launch()
+		arrowSprite.hide()
 
 	if (Input.is_action_just_pressed("addStrength")):
-		$Shooter.addStrength()
-		$HUD.updateStrength($Shooter.strength)
+		shooterObject.addStrength()
+		hudObject.updateStrength(shooterObject.strength)
 		
 	if (Input.is_action_just_pressed("subtractStrength")):
-		$Shooter.subtractStrength()
-		$HUD.updateStrength($Shooter.strength)
+		shooterObject.subtractStrength()
+		hudObject.updateStrength(shooterObject.strength)
 		
 	if (Input.is_action_just_pressed("addY")):
-		$Shooter.addY()
-		if ($Shooter.yDirection < 90): $Arrow.rotation_degrees += 10
+		shooterObject.addY()
+		if (shooterObject.yDirection < 90): arrowSprite.rotation_degrees += 10
 		
 	if (Input.is_action_just_pressed("subtractY")):
-		$Shooter.subtractY()
-		if ($Shooter.yDirection > -90): $Arrow.rotation_degrees -= 10
+		shooterObject.subtractY()
+		if (shooterObject.yDirection > -90): arrowSprite.rotation_degrees -= 10
+
+
+func _on_shooter_sleeping_state_changed() -> void:
+	if (shooterObject.isLanded):
+		get_tree().call_deferred("change_scene_to_file", "res://level.tscn")
