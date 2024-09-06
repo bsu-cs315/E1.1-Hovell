@@ -1,3 +1,7 @@
 res://shooter.tscn
 res://hud.gd
 res://level.gd
+res://shooter.gd
+res://level.tscn
+res://hud.tscn
+res://obstacle.tscn

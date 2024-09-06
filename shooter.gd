@@ -5,6 +5,7 @@ var strength : float = 100
 var yDirection : float = 0
 var isShot : bool = false
 var isLanded : bool = false
+@onready var sfxPew : AudioStreamPlayer = $SFXPew
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +13,7 @@ func _ready() -> void:
 	
 func launch() -> void:
 	if (!isShot):
+		sfxPew.play()
 		apply_impulse(Vector2(strength,yDirection), Vector2(1, yDirection).normalized())
 		gravity_scale = 0.2
 		isShot = true
