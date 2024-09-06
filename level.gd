@@ -1,11 +1,16 @@
-extends Node2D
+class_name Level extends Node2D
 
 @onready var shooterObject : Shooter = $Shooter
 @onready var hudObject : HUD = $HUD
 @onready var arrowSprite : Sprite2D = $Arrow
+@onready var startPosition : Marker2D = $ShooterStartPos
+
+var shotsLeft : int = 3
 
 func _ready() -> void:
+	shooterObject.resetShot(startPosition.position)
 	hudObject.updateStrength(shooterObject.strength)
+	hudObject.updateShotsLeft(shotsLeft)
 
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("launch")):
@@ -28,7 +33,11 @@ func _process(_delta: float) -> void:
 		shooterObject.subtractY()
 		if (shooterObject.yDirection > -90): arrowSprite.rotation_degrees -= 10
 
-
 func _on_shooter_sleeping_state_changed() -> void:
 	if (shooterObject.isLanded):
-		get_tree().call_deferred("change_scene_to_file", "res://level.tscn")
+		shotsLeft -= 1
+		hudObject.updateShotsLeft(shotsLeft)
+		if (shotsLeft > 0):
+			shooterObject.resetShot(startPosition.position)
+			arrowSprite.show()
+		

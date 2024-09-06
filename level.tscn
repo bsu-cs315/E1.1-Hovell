@@ -47,4 +47,7 @@ z_index = -10
 position = Vector2(640, 360)
 texture = ExtResource("7_ynuv2")
 
+[node name="ShooterStartPos" type="Marker2D" parent="."]
+position = Vector2(58, 236)
+
 [connection signal="sleeping_state_changed" from="Shooter" to="." method="_on_shooter_sleeping_state_changed"]

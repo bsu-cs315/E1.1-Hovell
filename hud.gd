@@ -1,9 +1,14 @@
-class_name HUD
+class_name HUD extends CanvasLayer
 
-extends CanvasLayer
+@onready var strengthLabel : Label = $StrengthLabel
+@onready var instructionsLabel : Label = $InstructionsLabel
+@onready var shotsLeftLabel : Label = $ShotsLeftLabel
 
 func updateStrength(strength) -> void:
-	$StrengthLabel.text = "Strength: " + str(strength)
+	strengthLabel.text = "Strength: " + str(strength)
 
 func _on_timer_timeout() -> void:
-	$InstructionsLabel.hide()
+	instructionsLabel.hide()
+
+func updateShotsLeft(shotsLeft) -> void:
+	shotsLeftLabel.text = "Shots Left: " + str(shotsLeft)

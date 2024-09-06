@@ -35,4 +35,11 @@ wait_time = 5.0
 one_shot = true
 autostart = true
 
+[node name="ShotsLeftLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 98.0
+offset_bottom = 71.0
+text = "Shots Left:"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

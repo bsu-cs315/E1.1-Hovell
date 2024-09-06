@@ -1,15 +1,11 @@
-class_name Shooter
-extends RigidBody2D
+class_name Shooter extends RigidBody2D
 
-var strength : float = 100
-var yDirection : float = 0
-var isShot : bool = false
-var isLanded : bool = false
 @onready var sfxPew : AudioStreamPlayer = $SFXPew
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	gravity_scale = 0
+var strength : float
+var yDirection : float
+var isShot : bool
+var isLanded : bool
 	
 func launch() -> void:
 	if (!isShot):
@@ -35,3 +31,11 @@ func subtractStrength() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if (body.name == "GroundTileMap"): isLanded = true
+	
+func resetShot(pos) -> void:
+	strength = 100
+	yDirection = 0
+	isShot = false
+	isLanded = false
+	gravity_scale = 0
+	position = pos
