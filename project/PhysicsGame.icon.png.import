@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fe1b1wtdaph2"
-path="res://.godot/imported/PhysicsGame.icon.png-b05c0b040000c5878cfcad4e032b7cde.ctex"
+path="res://.godot/imported/PhysicsGame.icon.png-0fbad545c29c21728e54af3d61692f56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ExportInfo/PhysicsGame.icon.png"
-dest_files=["res://.godot/imported/PhysicsGame.icon.png-b05c0b040000c5878cfcad4e032b7cde.ctex"]
+source_file="res://PhysicsGame.icon.png"
+dest_files=["res://.godot/imported/PhysicsGame.icon.png-0fbad545c29c21728e54af3d61692f56.ctex"]
 
 [params]
 

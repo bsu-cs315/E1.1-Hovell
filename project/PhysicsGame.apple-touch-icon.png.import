@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr17crvnvaybb"
-path="res://.godot/imported/icon.svg-c30e450f654eddecd02227eb3abc78f6.ctex"
+uid="uid://ckem2r3cwhmm6"
+path="res://.godot/imported/PhysicsGame.apple-touch-icon.png-5e00c73df9556145011bc40c700dc79c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ExportInfo/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-c30e450f654eddecd02227eb3abc78f6.ctex"]
+source_file="res://PhysicsGame.apple-touch-icon.png"
+dest_files=["res://.godot/imported/PhysicsGame.apple-touch-icon.png-5e00c73df9556145011bc40c700dc79c.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

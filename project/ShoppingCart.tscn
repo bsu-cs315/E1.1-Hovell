@@ -1,16 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://b28uparvl7yse"]
+[gd_scene load_steps=4 format=3 uid="uid://dg2migv8m5u0y"]
 
-[ext_resource type="Texture2D" path="res://ShoppingCart.png" id="1_d5axa"]
-[ext_resource type="Script" path="res://shoppingCart.gd" id="1_rulwq"]
+[ext_resource type="Texture2D" uid="uid://dsxo1rkvmklah" path="res://Graphics/ShoppingCart.png" id="1_d5axa"]
+[ext_resource type="Script" path="res://shopping_cart.gd" id="1_mbjj5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ieg64"]
 size = Vector2(84, 60)
 
-[node name="Obstacle" type="RigidBody2D"]
+[node name="ShoppingCart" type="RigidBody2D"]
 gravity_scale = 0.0
 contact_monitor = true
-max_contacts_reported = 1
-script = ExtResource("1_rulwq")
+max_contacts_reported = 100
+script = ExtResource("1_mbjj5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckem2r3cwhmm6"
-path="res://.godot/imported/PhysicsGame.apple-touch-icon.png-cb0b6c3c4722513a819600a93059d47c.ctex"
+uid="uid://dh1sponwuua52"
+path="res://.godot/imported/PhysicsGame.png-5358abbaf8d667abcb48a09ae17033a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ExportInfo/PhysicsGame.apple-touch-icon.png"
-dest_files=["res://.godot/imported/PhysicsGame.apple-touch-icon.png-cb0b6c3c4722513a819600a93059d47c.ctex"]
+source_file="res://PhysicsGame.png"
+dest_files=["res://.godot/imported/PhysicsGame.png-5358abbaf8d667abcb48a09ae17033a7.ctex"]
 
 [params]
 

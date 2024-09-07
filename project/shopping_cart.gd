@@ -1,4 +1,4 @@
-class_name ShoppingCart extends RigidBody2D
+extends RigidBody2D
 
 func _on_body_entered(_body: Node) -> void:
 	$".".queue_free()
