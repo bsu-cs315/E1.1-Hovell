@@ -8,10 +8,10 @@ All graphics and sound effects are original
 
 ## Report
 
-Graphics: Complete
-Sounds: Complete
-One at a time: Complete
-Licenses: Complete
-Version control: Complete
-Release Management: Complete
-Report: Complete
+ - Graphics: Complete
+ - Sounds: Complete
+ - One at a time: Complete
+ - Licenses: Complete
+ - Version control: Complete
+ - Release Management: Complete
+ - Report: Complete
