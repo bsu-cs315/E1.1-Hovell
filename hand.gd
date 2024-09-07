@@ -21,7 +21,7 @@ func _process(_delta: float) -> void:
 	
 	
 func launch() -> void:
-	if (shotsLeft > 0):
+	if (shotsLeft > 0 && !isShot):
 		sfxPew.play()
 		ball = load("res://shooter.tscn").instantiate()
 		get_parent().add_child(ball)

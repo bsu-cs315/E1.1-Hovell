@@ -1,6 +1,4 @@
-res://shooter.tscn
-res://hand.gd
-res://level.gd
-res://shooter.gd
 res://level.tscn
 res://hand.tscn
+res://shooter.tscn
+res://hand.gd
