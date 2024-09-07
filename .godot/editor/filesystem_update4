@@ -2,3 +2,11 @@ res://level.tscn
 res://hand.tscn
 res://shooter.tscn
 res://hand.gd
+res://shooter.gd
+res://Tomato.tscn
+res://hud.gd
+res://level.gd
+res://obstacle.tscn
+res://ShoppingCart.tscn
+res://shoppingCart.gd
+res://hud.tscn
