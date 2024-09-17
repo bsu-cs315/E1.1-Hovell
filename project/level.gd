@@ -1,33 +1,34 @@
-class_name Level extends Node2D
+class_name Level
+extends Node2D
 
-@onready var handObject : Hand = $Hand
-@onready var hudObject : HUD = $HUD
-@onready var arrowSprite : Sprite2D = $Arrow
-
-
+@onready var _hand_object : Hand = $Hand
+@onready var _hud_object : HUD = $HUD
+@onready var _arrow_sprite : Sprite2D = $Arrow
 
 func _ready() -> void:
-	hudObject.updateStrength(handObject.throwStrength)
+	_hud_object.update_strength_label(_hand_object.throw_strength)
+
 
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("throw")):
-		handObject.throw()
+		_hand_object.throw()
 
 	if (Input.is_action_just_pressed("addStrength")):
-		handObject.addStrength()
-		hudObject.updateStrength(handObject.throwStrength)
+		_hand_object.add_strength()
+		_hud_object.update_strength_label(_hand_object.throw_strength)
 		
 	if (Input.is_action_just_pressed("subtractStrength")):
-		handObject.subtractStrength()
-		hudObject.updateStrength(handObject.throwStrength)
+		_hand_object.subtract_strength()
+		_hud_object.update_strength_label(_hand_object.throw_strength)
 		
 	if (Input.is_action_just_pressed("addY")):
-		handObject.addY()
-		if (handObject.throwYDirection < 90): arrowSprite.rotation_degrees += 10
+		_hand_object.addy()
+		if (_hand_object.throw_ydirection < 90): _arrow_sprite.rotation_degrees += 10
 		
 	if (Input.is_action_just_pressed("subtractY")):
-		handObject.subtractY()
-		if (handObject.throwYDirection > -90): arrowSprite.rotation_degrees -= 10
+		_hand_object.subtracty()
+		if (_hand_object.throw_ydirection > -90): _arrow_sprite.rotation_degrees -= 10
+		
 		
 func _on_hand_game_finished() -> void:
 	get_tree().change_scene_to_file("res://title.tscn")

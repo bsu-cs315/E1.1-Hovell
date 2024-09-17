@@ -1,52 +1,58 @@
-class_name Hand extends Node2D
+class_name Hand
+extends Node2D
 
-@onready var sfxPew : AudioStreamPlayer = $SFXPew
-@onready var hudObject : HUD = $"../HUD"
+signal game_finished
 
-var throwStrength : float = 500
-var throwYDirection : float = 0
-var tomatoObject : Tomato
-var isThrown : bool = false
-var throwsLeft : int = 3
+var throw_strength : float = 500
+var throw_ydirection : float = 0
+var _tomato_object : Tomato
+var _is_thrown : bool = false
+var _throws_left : int = 1
 
-signal gameFinished
+@onready var sound_shoot : AudioStreamPlayer = $SFXPew
+@onready var hud_object : HUD = $"../HUD"
 
 func _ready() -> void:
-	hudObject.updateThrowsLeft(throwsLeft)
-	hudObject.updateHandAvailable(true)
+	hud_object.update_throws_label(_throws_left)
+	hud_object.update_hand_label(true)
+
 
 func _process(_delta: float) -> void:
-	if (isThrown): if (tomatoObject.getIsLanded()): 
-		isThrown = false
-		throwsLeft -= 1
-		hudObject.updateThrowsLeft(throwsLeft)
-		if (throwsLeft > 0):
-			hudObject.updateHandAvailable(true)
+	if (_is_thrown): if (_tomato_object.get_is_landed()): 
+		_is_thrown = false
+		_throws_left -= 1
+		hud_object.update_throws_label(_throws_left)
+		if (_throws_left > 0):
+			hud_object.update_hand_label(true)
 		else:
-			hudObject.handFinished()
-			gameFinished.emit()
+			game_finished.emit()
+
 	
 func throw() -> void:
-	if (throwsLeft > 0 && !isThrown):
-		sfxPew.play()
-		tomatoObject = load("res://Tomato.tscn").instantiate()
-		get_parent().add_child(tomatoObject)
-		tomatoObject.global_position = global_position
-		tomatoObject.apply_impulse(Vector2(throwStrength,throwYDirection * 5), Vector2(1,throwYDirection).normalized())
-		isThrown = true
-		hudObject.updateHandAvailable(false)
+	if (_throws_left > 0 && !_is_thrown):
+		sound_shoot.play()
+		_tomato_object = load("res://Tomato.tscn").instantiate()
+		get_parent().add_child(_tomato_object)
+		_tomato_object.global_position = global_position
+		_tomato_object.apply_impulse(Vector2(throw_strength,throw_ydirection * 5), Vector2(1,throw_ydirection).normalized())
+		_is_thrown = true
+		hud_object.update_hand_label(false)
 		
-func addY() -> void:
-	if (throwYDirection < 90):
-		throwYDirection += 10
+		
+func addy() -> void:
+	if (throw_ydirection < 90):
+		throw_ydirection += 10
 
-func subtractY() -> void:
-	if (throwYDirection > -90):
-		throwYDirection -= 10
+
+func subtracty() -> void:
+	if (throw_ydirection > -90):
+		throw_ydirection -= 10
 		
-func addStrength() -> void:
-	throwStrength += 20
+		
+func add_strength() -> void:
+	throw_strength += 20
 	
-func subtractStrength() -> void:
-	if (throwStrength > 0):
-		throwStrength -= 20
+	
+func subtract_strength() -> void:
+	if (throw_strength > 0):
+		throw_strength -= 20

@@ -1,13 +1,19 @@
-class_name Tomato extends RigidBody2D
+class_name Tomato
+extends RigidBody2D
 
-var finishedThrow : bool = false
-var isSleeping : bool = false
+var finished_throw : bool = false
+var is_stopped : bool = false
+
+
+func get_is_landed() -> bool:
+	return is_stopped && finished_throw
+	
 
 func _on_sleeping_state_changed() -> void:
-	isSleeping = true
+	is_stopped = true
 	
-func _on_body_entered(body: Node) -> void:
-	if (body.name == "GroundTileMap" || body.name == "Tomato"): finishedThrow = true
 	
-func getIsLanded() -> bool:
-	return isSleeping && finishedThrow
+func _on_body_entered(_body: Node) -> void:
+	if (_body.name == "GroundTileMap" || _body.name == "Tomato"): finished_throw = true
+	
+	
