@@ -18,18 +18,19 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if (_is_thrown): if (_tomato_object.get_is_landed()): 
-		_is_thrown = false
-		_throws_left -= 1
-		hud_object.update_throws_label(_throws_left)
-		if (_throws_left > 0):
-			hud_object.update_hand_label(true)
-		else:
-			game_finished.emit()
+	if _is_thrown: 
+		if _tomato_object.get_is_landed(): 
+			_is_thrown = false
+			_throws_left -= 1
+			hud_object.update_throws_label(_throws_left)
+			if _throws_left > 0:
+				hud_object.update_hand_label(true)
+			else:
+				game_finished.emit()
 
 	
 func throw() -> void:
-	if (_throws_left > 0 && !_is_thrown):
+	if _throws_left > 0 and not _is_thrown:
 		sound_shoot.play()
 		_tomato_object = load("res://tomato.tscn").instantiate()
 		get_parent().add_child(_tomato_object)
@@ -40,12 +41,12 @@ func throw() -> void:
 		
 		
 func addy() -> void:
-	if (throw_ydirection < 90):
+	if throw_ydirection < 90:
 		throw_ydirection += 10
 
 
 func subtracty() -> void:
-	if (throw_ydirection > -90):
+	if throw_ydirection > -90:
 		throw_ydirection -= 10
 		
 		
@@ -54,5 +55,5 @@ func add_strength() -> void:
 	
 	
 func subtract_strength() -> void:
-	if (throw_strength > 0):
+	if throw_strength > 0:
 		throw_strength -= 20

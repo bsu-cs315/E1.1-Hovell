@@ -15,7 +15,7 @@ func update_throws_label(_throwsLeft) -> void:
 
 
 func update_hand_label(_canThrow):
-	if (_canThrow):
+	if _canThrow:
 		_hand_available_label.text = "Hand Available"
 		_hand_available_label.modulate = Color.DARK_GREEN
 	else:

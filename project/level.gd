@@ -10,24 +10,26 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if (Input.is_action_just_pressed("throw")):
+	if Input.is_action_just_pressed("throw"):
 		_hand_object.throw()
 
-	if (Input.is_action_just_pressed("addStrength")):
+	if Input.is_action_just_pressed("addStrength"):
 		_hand_object.add_strength()
 		_hud_object.update_strength_label(_hand_object.throw_strength)
 		
-	if (Input.is_action_just_pressed("subtractStrength")):
+	if Input.is_action_just_pressed("subtractStrength"):
 		_hand_object.subtract_strength()
 		_hud_object.update_strength_label(_hand_object.throw_strength)
 		
-	if (Input.is_action_just_pressed("addY")):
+	if Input.is_action_just_pressed("addY"):
 		_hand_object.addy()
-		if (_hand_object.throw_ydirection < 90): _arrow_sprite.rotation_degrees += 10
+		if _hand_object.throw_ydirection < 90:
+			_arrow_sprite.rotation_degrees += 10
 		
-	if (Input.is_action_just_pressed("subtractY")):
+	if Input.is_action_just_pressed("subtractY"):
 		_hand_object.subtracty()
-		if (_hand_object.throw_ydirection > -90): _arrow_sprite.rotation_degrees -= 10
+		if _hand_object.throw_ydirection > -90:
+			_arrow_sprite.rotation_degrees -= 10
 		
 		
 func _on_hand_game_finished() -> void:

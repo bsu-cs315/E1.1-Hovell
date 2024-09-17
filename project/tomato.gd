@@ -14,6 +14,7 @@ func _on_sleeping_state_changed() -> void:
 	
 	
 func _on_body_entered(_body: Node) -> void:
-	if (_body.name == "GroundTileMap" || _body.name == "Tomato"): finished_throw = true
+	if _body.name == "GroundTileMap" or _body.name == "Tomato":
+		finished_throw = true
 	
 	
