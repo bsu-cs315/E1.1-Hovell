@@ -1,7 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5hcm07feillb"]
+[gd_scene load_steps=6 format=3 uid="uid://b5hcm07feillb"]
 
 [ext_resource type="Texture2D" uid="uid://dyn365uj6d6lm" path="res://Graphics/background.png" id="1_ukta0"]
 [ext_resource type="Script" path="res://button.gd" id="2_4bs8p"]
+
+[sub_resource type="Animation" id="Animation_vcaub"]
+resource_name = "TitleTransition"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(0.450624, 2.54912),
+"update": 0,
+"values": [Vector2(-35, -145), Vector2(128, 444)]
+}
+
+[sub_resource type="Animation" id="Animation_xanom"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(128, 444)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_30ic6"]
+_data = {
+"RESET": SubResource("Animation_xanom"),
+"TitleTransition": SubResource("Animation_vcaub")
+}
 
 [node name="Title" type="Node2D"]
 
@@ -10,7 +46,7 @@ z_index = -10
 position = Vector2(640, 360)
 texture = ExtResource("1_ukta0")
 
-[node name="Label" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -39,5 +75,11 @@ text = "Play!"
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_4bs8p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_30ic6")
+}
+autoplay = "TitleTransition"
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
