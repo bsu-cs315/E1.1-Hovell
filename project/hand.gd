@@ -9,6 +9,8 @@ var tomatoObject : Tomato
 var isThrown : bool = false
 var throwsLeft : int = 3
 
+signal gameFinished
+
 func _ready() -> void:
 	hudObject.updateThrowsLeft(throwsLeft)
 	hudObject.updateHandAvailable(true)
@@ -22,6 +24,7 @@ func _process(_delta: float) -> void:
 			hudObject.updateHandAvailable(true)
 		else:
 			hudObject.handFinished()
+			gameFinished.emit()
 	
 func throw() -> void:
 	if (throwsLeft > 0 && !isThrown):

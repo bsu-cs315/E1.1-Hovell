@@ -29,3 +29,5 @@ func _process(_delta: float) -> void:
 		handObject.subtractY()
 		if (handObject.throwYDirection > -90): arrowSprite.rotation_degrees -= 10
 		
+func _on_hand_game_finished() -> void:
+	get_tree().change_scene_to_file("res://title.tscn")
