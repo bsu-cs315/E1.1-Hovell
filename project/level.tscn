@@ -48,4 +48,6 @@ texture = ExtResource("7_ynuv2")
 z_index = -1
 position = Vector2(59, 239)
 
+[connection signal="tomato_thrown" from="." to="Hand" method="_on_level_tomato_thrown"]
 [connection signal="game_finished" from="Hand" to="." method="_on_hand_game_finished"]
+[connection signal="throw_finished" from="Hand" to="." method="_on_hand_throw_finished"]
