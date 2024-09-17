@@ -7,10 +7,10 @@ Camden Hovell's CS315 project for Exercise 1
 All graphics and sound effects are original
 
 ## Report
-
- - Graphics: Complete
- - Sounds: Complete
- - One at a time: Complete
+ - Core Loop: Complete
+ - Pop: Complete
+ - Style: Complete
+ - Clean: Complete
  - Licenses: Complete
  - Version control: Complete
  - Release Management: Complete
