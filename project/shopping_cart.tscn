@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ieg64"]
 size = Vector2(84, 60)
 
-[node name="ShoppingCart" type="RigidBody2D"]
+[node name="shopping_cart" type="RigidBody2D"]
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 100

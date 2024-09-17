@@ -31,7 +31,7 @@ func _process(_delta: float) -> void:
 func throw() -> void:
 	if (_throws_left > 0 && !_is_thrown):
 		sound_shoot.play()
-		_tomato_object = load("res://Tomato.tscn").instantiate()
+		_tomato_object = load("res://tomato.tscn").instantiate()
 		get_parent().add_child(_tomato_object)
 		_tomato_object.global_position = global_position
 		_tomato_object.apply_impulse(Vector2(throw_strength,throw_ydirection * 5), Vector2(1,throw_ydirection).normalized())

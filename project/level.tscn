@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://g5te2ra2eisv" path="res://Graphics/floor.png" id="2_mkscy"]
 [ext_resource type="Texture2D" uid="uid://2kk7416mees2" path="res://Graphics/arrow.png" id="3_gatks"]
 [ext_resource type="PackedScene" uid="uid://b0grb667slcns" path="res://hud.tscn" id="4_3owsy"]
-[ext_resource type="PackedScene" uid="uid://dg2migv8m5u0y" path="res://ShoppingCart.tscn" id="5_52lv3"]
+[ext_resource type="PackedScene" uid="uid://dg2migv8m5u0y" path="res://shopping_cart.tscn" id="5_52lv3"]
 [ext_resource type="PackedScene" uid="uid://bgtv5t1ysrhdj" path="res://hand.tscn" id="7_4gnjw"]
 [ext_resource type="Texture2D" uid="uid://dyn365uj6d6lm" path="res://Graphics/background.png" id="7_ynuv2"]
 
@@ -20,7 +20,7 @@ tile_size = Vector2i(100, 100)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_j5bgc")
 
-[node name="Level" type="Node2D"]
+[node name="level" type="Node2D"]
 script = ExtResource("1_3a1ja")
 
 [node name="GroundTileMap" type="TileMapLayer" parent="."]

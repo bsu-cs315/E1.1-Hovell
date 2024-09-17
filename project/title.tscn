@@ -39,7 +39,7 @@ _data = {
 "TitleTransition": SubResource("Animation_vcaub")
 }
 
-[node name="Title" type="Node2D"]
+[node name="title" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -10
