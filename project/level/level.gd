@@ -18,27 +18,27 @@ func _process(_delta: float) -> void:
 		tomato_thrown.emit()
 		_hud_object.update_hand_label(false)
 
-	if Input.is_action_just_pressed("addStrength"):
+	if Input.is_action_just_pressed("increase_strength"):
 		_hand_object.add_strength()
 		_hud_object.update_strength_label(_hand_object.throw_strength)
 		
-	if Input.is_action_just_pressed("subtractStrength"):
+	if Input.is_action_just_pressed("decrease_strength"):
 		_hand_object.subtract_strength()
 		_hud_object.update_strength_label(_hand_object.throw_strength)
 		
-	if Input.is_action_just_pressed("addY"):
-		_hand_object.addy()
-		if _hand_object.throw_ydirection < _hand_object.max_throw_angle:
-			_arrow_sprite.rotation_degrees += _hand_object.ydirection_increment
+	if Input.is_action_just_pressed("increase_y"):
+		_hand_object.increase_y()
+		if _hand_object.throw_y_direction < _hand_object.max_throw_angle:
+			_arrow_sprite.rotation_degrees += _hand_object.y_direction_increment
 		
-	if Input.is_action_just_pressed("subtractY"):
-		_hand_object.subtracty()
-		if _hand_object.throw_ydirection > _hand_object.min_throw_angle:
-			_arrow_sprite.rotation_degrees -= _hand_object.ydirection_increment
+	if Input.is_action_just_pressed("decrease_y"):
+		_hand_object.decrease_y()
+		if _hand_object.throw_y_direction > _hand_object.min_throw_angle:
+			_arrow_sprite.rotation_degrees -= _hand_object.y_direction_increment
 		
 		
 func _on_hand_game_finished() -> void:
-	get_tree().change_scene_to_file("res://title.tscn")
+	get_tree().change_scene_to_file("res://title/title.tscn")
 
 
 func _on_hand_throw_finished() -> void:
