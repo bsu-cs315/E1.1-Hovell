@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bs50ewppibe73"]
 
-[ext_resource type="Script" path="res://tomato.gd" id="1_lme4u"]
-[ext_resource type="Texture2D" uid="uid://djdjj6tap238g" path="res://Graphics/Tomato.png" id="2_a8qp3"]
+[ext_resource type="Script" path="res://tomato/tomato.gd" id="1_lme4u"]
+[ext_resource type="Texture2D" uid="uid://djdjj6tap238g" path="res://tomato/Tomato.png" id="2_a8qp3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s1r76"]
 radius = 48.0

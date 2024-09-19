@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dg2migv8m5u0y"]
 
-[ext_resource type="Texture2D" uid="uid://dsxo1rkvmklah" path="res://Graphics/ShoppingCart.png" id="1_d5axa"]
-[ext_resource type="Script" path="res://shopping_cart.gd" id="1_mbjj5"]
+[ext_resource type="Texture2D" uid="uid://dsxo1rkvmklah" path="res://shopping_cart/ShoppingCart.png" id="1_d5axa"]
+[ext_resource type="Script" path="res://shopping_cart/shopping_cart.gd" id="1_mbjj5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ieg64"]
 size = Vector2(84, 60)

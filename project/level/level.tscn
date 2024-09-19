@@ -1,16 +1,16 @@
 [gd_scene load_steps=10 format=4 uid="uid://brgqp0oww0bp3"]
 
-[ext_resource type="Script" path="res://level.gd" id="1_3a1ja"]
-[ext_resource type="Texture2D" uid="uid://g5te2ra2eisv" path="res://Graphics/floor.png" id="2_mkscy"]
-[ext_resource type="Texture2D" uid="uid://2kk7416mees2" path="res://Graphics/arrow.png" id="3_gatks"]
-[ext_resource type="PackedScene" uid="uid://b0grb667slcns" path="res://hud.tscn" id="4_3owsy"]
-[ext_resource type="PackedScene" uid="uid://dg2migv8m5u0y" path="res://shopping_cart.tscn" id="5_52lv3"]
-[ext_resource type="PackedScene" uid="uid://bgtv5t1ysrhdj" path="res://hand.tscn" id="7_4gnjw"]
-[ext_resource type="Texture2D" uid="uid://dyn365uj6d6lm" path="res://Graphics/background.png" id="7_ynuv2"]
+[ext_resource type="Script" path="res://level/level.gd" id="1_jlxr4"]
+[ext_resource type="Texture2D" uid="uid://g5te2ra2eisv" path="res://level/floor.png" id="2_cg1e4"]
+[ext_resource type="Texture2D" uid="uid://2kk7416mees2" path="res://level/arrow.png" id="3_bab85"]
+[ext_resource type="PackedScene" uid="uid://b0grb667slcns" path="res://hud/hud.tscn" id="4_1sx6b"]
+[ext_resource type="PackedScene" uid="uid://dg2migv8m5u0y" path="res://shopping_cart/shopping_cart.tscn" id="5_nxcot"]
+[ext_resource type="Texture2D" uid="uid://dyn365uj6d6lm" path="res://level/background.png" id="6_du13j"]
+[ext_resource type="PackedScene" uid="uid://bgtv5t1ysrhdj" path="res://hand/hand.tscn" id="7_m5mx8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5bgc"]
 resource_name = "Floor"
-texture = ExtResource("2_mkscy")
+texture = ExtResource("2_cg1e4")
 texture_region_size = Vector2i(100, 100)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
@@ -21,7 +21,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_j5bgc")
 
 [node name="level" type="Node2D"]
-script = ExtResource("1_3a1ja")
+script = ExtResource("1_jlxr4")
 
 [node name="GroundTileMap" type="TileMapLayer" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -32,19 +32,19 @@ rendering_quadrant_size = 100
 [node name="Arrow" type="Sprite2D" parent="."]
 position = Vector2(128, 236)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_gatks")
+texture = ExtResource("3_bab85")
 
-[node name="HUD" parent="." instance=ExtResource("4_3owsy")]
+[node name="HUD" parent="." instance=ExtResource("4_1sx6b")]
 
-[node name="ShoppingCart" parent="." instance=ExtResource("5_52lv3")]
+[node name="ShoppingCart" parent="." instance=ExtResource("5_nxcot")]
 position = Vector2(344, 232)
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -10
 position = Vector2(640, 360)
-texture = ExtResource("7_ynuv2")
+texture = ExtResource("6_du13j")
 
-[node name="Hand" parent="." instance=ExtResource("7_4gnjw")]
+[node name="Hand" parent="." instance=ExtResource("7_m5mx8")]
 z_index = -1
 position = Vector2(59, 239)
 

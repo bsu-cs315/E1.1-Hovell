@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsxo1rkvmklah"
-path="res://.godot/imported/ShoppingCart.png-22044fe21ac62ede1c7eea006406d2d7.ctex"
+uid="uid://dyn365uj6d6lm"
+path="res://.godot/imported/background.png-7cc287d099ef689961c37316554301ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/ShoppingCart.png"
-dest_files=["res://.godot/imported/ShoppingCart.png-22044fe21ac62ede1c7eea006406d2d7.ctex"]
+source_file="res://level/background.png"
+dest_files=["res://.godot/imported/background.png-7cc287d099ef689961c37316554301ed.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g5te2ra2eisv"
-path="res://.godot/imported/floor.png-a8dfee1b78275ae8aac1a8e1374d1c73.ctex"
+uid="uid://2kk7416mees2"
+path="res://.godot/imported/arrow.png-0a522b470f7145d66e30a750798b4a15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/floor.png"
-dest_files=["res://.godot/imported/floor.png-a8dfee1b78275ae8aac1a8e1374d1c73.ctex"]
+source_file="res://level/arrow.png"
+dest_files=["res://.godot/imported/arrow.png-0a522b470f7145d66e30a750798b4a15.ctex"]
 
 [params]
 

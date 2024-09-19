@@ -1,22 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b5hcm07feillb"]
 
-[ext_resource type="Texture2D" uid="uid://dyn365uj6d6lm" path="res://Graphics/background.png" id="1_ukta0"]
-[ext_resource type="Script" path="res://button.gd" id="2_4bs8p"]
-
-[sub_resource type="Animation" id="Animation_vcaub"]
-resource_name = "TitleTransition"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Title:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.966667),
-"transitions": PackedFloat32Array(0.450624, 2.54912),
-"update": 0,
-"values": [Vector2(-35, -145), Vector2(128, 444)]
-}
+[ext_resource type="Texture2D" uid="uid://dyn365uj6d6lm" path="res://level/background.png" id="1_m44i1"]
+[ext_resource type="Script" path="res://title/button.gd" id="2_r5ag8"]
 
 [sub_resource type="Animation" id="Animation_xanom"]
 length = 0.001
@@ -33,6 +18,21 @@ tracks/0/keys = {
 "values": [Vector2(128, 444)]
 }
 
+[sub_resource type="Animation" id="Animation_vcaub"]
+resource_name = "TitleTransition"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(0.450624, 2.54912),
+"update": 0,
+"values": [Vector2(-35, -145), Vector2(128, 444)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_30ic6"]
 _data = {
 "RESET": SubResource("Animation_xanom"),
@@ -44,7 +44,7 @@ _data = {
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -10
 position = Vector2(640, 360)
-texture = ExtResource("1_ukta0")
+texture = ExtResource("1_m44i1")
 
 [node name="Title" type="Label" parent="."]
 anchors_preset = 8
@@ -53,9 +53,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 128.0
-offset_top = 443.999
+offset_top = 444.0
 offset_right = 1135.0
-offset_bottom = 580.999
+offset_bottom = 581.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -74,7 +74,7 @@ offset_bottom = 615.0
 text = "Play!"
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("2_4bs8p")
+script = ExtResource("2_r5ag8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
